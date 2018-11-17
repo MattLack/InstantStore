@@ -26,10 +26,10 @@ Project Mobile in Kotlin language
 - https://www.fluidui.com/editor/live/preview/cF9rUm1XbUUwbmVFTHRENzg0Z0YzQWJPb0hCU1FNems0Zw==
 
 ### Links úteis:
- - http://www.appsdeveloperblog.com/firebase-authentication-example-kotlin/
- - https://medium.com/@paul.allies/kotlin-for-android-firebase-auth-275a262d825e
- - https://android--code.blogspot.com/2018/02/android-kotlin-toolbar-example.html
- - https://www.youtube.com/watch?v=4YM1n0zQ17I
+ - [Firebase Auth] http://www.appsdeveloperblog.com/firebase-authentication-example-kotlin/
+ - [Firebase Auth] https://medium.com/@paul.allies/kotlin-for-android-firebase-auth-275a262d825e
+ - {Toolbar Example} https://android--code.blogspot.com/2018/02/android-kotlin-toolbar-example.html
+ - {Firebase Auth Phone Kotlin} https://www.youtube.com/watch?v=4YM1n0zQ17I
  - {Instagram API} https://www.instagram.com/developer/endpoints/users/
  - {Sobre API Instagram} https://stackoverflow.com/questions/10881511/instagram-api-how-to-get-all-user-media
  - {Fragment screen configuration kotlin vídeo1} https://www.youtube.com/watch?v=6Vpo9I3RcsI
