@@ -17,4 +17,10 @@ class LoginActivity : AppCompatActivity() {
         // intent.putExtra("input",editText.text.toString())
         startActivity(intent)
     }
+
+    fun goToMainScreenActvity(view : View){
+        val intent = Intent(applicationContext,MainScreenActivity::class.java)
+        // intent.putExtra("input",editText.text.toString())
+        startActivity(intent)
+    }
 }

@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content">
 
             <Button
-                    android:text="@string/btnLogin"
+                    android:text="@string/btnlogin"
                     android:layout_width="290dp"
                     android:layout_height="47dp"
                     android:id="@+id/btnlogin"
