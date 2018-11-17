@@ -5,7 +5,6 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/images"
         android:alpha="1"
         tools:context=".LoginActivity">
 
@@ -37,12 +36,11 @@
                 android:layout_height="match_parent">
 
             <Button
-                    android:text="Button"
+                    android:text="@string/btnLogin"
                     android:layout_width="333dp"
                     android:layout_height="71dp"
                     android:id="@+id/button2"
                     android:layout_marginBottom="16dp"
-                    android:background="@color/colorPrimary"
                     app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.514"/>
@@ -51,22 +49,23 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
                     android:ems="10"
-                    android:background="@color/colorPrimary"
-                    android:theme="@style/Theme.AppCompat"
-                    android:id="@+id/editText5" android:layout_marginBottom="32dp"
+                    android:id="@+id/txtpass" android:layout_marginBottom="32dp"
                     app:layout_constraintBottom_toTopOf="@+id/button2" android:layout_marginEnd="8dp"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent" android:hint="@string/txtHintPassword"/>
             <EditText
                     android:layout_width="325dp"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
                     android:ems="10"
-                    android:id="@+id/editText3" app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/txtemail"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginStart="8dp" android:layout_marginBottom="28dp"
-                    app:layout_constraintBottom_toTopOf="@+id/editText5" app:layout_constraintHorizontal_bias="0.604"
-                    android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintBottom_toTopOf="@+id/txtpass" app:layout_constraintHorizontal_bias="0.604"
+                    android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                    android:hint="@string/txtHintEmail"/>
         </android.support.constraint.ConstraintLayout>
 
     </android.support.v7.widget.LinearLayoutCompat>
