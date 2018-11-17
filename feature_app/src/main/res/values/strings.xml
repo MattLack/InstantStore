@@ -12,4 +12,5 @@
     <string name="txtHintPassword">Password</string>
     <string name="txtHintEmail">Email</string>
     <string name="btnLogin">Login</string>
+    <string name="btncadastr">Sign Up</string>
 </resources>
