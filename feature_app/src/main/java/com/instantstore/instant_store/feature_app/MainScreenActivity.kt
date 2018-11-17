@@ -11,13 +11,31 @@ class MainScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_screen)
+
+        // Set the toolbar as support action bar
+        setSupportActionBar(toolbar)
+
+        // Now get the support action bar
+        val actionBar = supportActionBar
+
+        // Set toolbar title/app title
+        actionBar!!.title = "Instant App"
+
+        // Set action bar/toolbar sub title
+        //actionBar.subtitle = "App subtitle"
+
+        // Set action bar elevation
+        actionBar.elevation = 4.0F
+
+        // Display the app icon in action bar/toolbar
+        actionBar.setDisplayShowHomeEnabled(true)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        //call tollbar menu
-        return super.onCreateOptionsMenu(menu)
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu to use in the action bar
         val inflater = menuInflater
         inflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
     }
 
 
