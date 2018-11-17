@@ -32,4 +32,7 @@ Project Mobile in Kotlin language
  - https://www.youtube.com/watch?v=4YM1n0zQ17I
  - {Instagram API} https://www.instagram.com/developer/endpoints/users/
  - {Sobre API Instagram} https://stackoverflow.com/questions/10881511/instagram-api-how-to-get-all-user-media
+ - {Fragment screen configuration kotlin vídeo1} https://www.youtube.com/watch?v=6Vpo9I3RcsI
+ - {Fragment screen configuration kotlin vídeo2} https://www.youtube.com/watch?v=mAFXFRiJbxw
+ 
  
