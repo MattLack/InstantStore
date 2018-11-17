@@ -20,5 +20,14 @@ Project Mobile in Kotlin language
 - A camada de negócio dessa aplicação foca no uso da API do Instagram;
 - O desenvolvimento das telas utilizará um formato de design minimalista, para facilitar o porte da aplicação para formato de Instant Apps.
 - O App utilizará a autenticação de usuário via Firebase;
-- A aplicação suportará as versões 6.0 - 8.1;
+- A aplicação suportará as versões 8.1 - 9.0;
 
+### Protótipo base de telas:
+- https://www.fluidui.com/editor/live/preview/cF9rUm1XbUUwbmVFTHRENzg0Z0YzQWJPb0hCU1FNems0Zw==
+
+### Links úteis:
+ - http://www.appsdeveloperblog.com/firebase-authentication-example-kotlin/
+ - https://medium.com/@paul.allies/kotlin-for-android-firebase-auth-275a262d825e
+ - https://android--code.blogspot.com/2018/02/android-kotlin-toolbar-example.html
+ - https://www.youtube.com/watch?v=4YM1n0zQ17I
+ 
