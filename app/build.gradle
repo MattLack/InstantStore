@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.instantstore.instant_store.app"
-        minSdkVersion 27
+        minSdkVersion 26
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"

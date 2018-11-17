@@ -73,7 +73,8 @@
                     android:layout_height="42dp"
                     app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/btncadastr"
                     android:textSize="12sp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                    android:onClick="goToSignUpActvity"/>
         </android.support.constraint.ConstraintLayout>
 
     </android.support.v7.widget.LinearLayoutCompat>
