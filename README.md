@@ -30,4 +30,6 @@ Project Mobile in Kotlin language
  - https://medium.com/@paul.allies/kotlin-for-android-firebase-auth-275a262d825e
  - https://android--code.blogspot.com/2018/02/android-kotlin-toolbar-example.html
  - https://www.youtube.com/watch?v=4YM1n0zQ17I
+ - {Instagram API} https://www.instagram.com/developer/endpoints/users/
+ - {Sobre API Instagram} https://stackoverflow.com/questions/10881511/instagram-api-how-to-get-all-user-media
  
