@@ -32,7 +32,9 @@ Project Mobile in Kotlin language
  - {Firebase Auth Phone Kotlin} https://www.youtube.com/watch?v=4YM1n0zQ17I
  - {Instagram API} https://www.instagram.com/developer/endpoints/users/
  - {Sobre API Instagram} https://stackoverflow.com/questions/10881511/instagram-api-how-to-get-all-user-media
- - {Fragment screen configuration kotlin vídeo1} https://www.youtube.com/watch?v=6Vpo9I3RcsI
- - {Fragment screen configuration kotlin vídeo2} https://www.youtube.com/watch?v=mAFXFRiJbxw
+ - {Fragment screen configuration Part1 kotlin} https://www.youtube.com/watch?v=fGcMLu1GJEc&
+ - {Fragment screen configuration Part2 kotlin} https://www.youtube.com/watch?v=zYVEMCiDcmY
+ - {Fragment screen configuration Part3 kotlin} https://www.youtube.com/watch?v=bjYstsO1PgI
+ 
  
  
