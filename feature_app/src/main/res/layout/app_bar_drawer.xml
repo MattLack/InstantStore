@@ -17,15 +17,27 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <!--this is replaced to the fragment layout-->
+    <FrameLayout
+            android:id="@+id/fragment_main_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="52dp"
+    >
 
-    <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:textSize="20sp"
-            android:layout_gravity="center"
-            android:text="Instant Store"
-    />
+    </FrameLayout>
+
+
+
+
+    <!--<android.support.v7.widget.appcompattextview-->
+            <!--android:id="@+id/message"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textcolor="@color/colorprimary"-->
+            <!--android:textsize="20sp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:text="instant store"-->
+    <!--/>-->
 
 </android.support.design.widget.CoordinatorLayout>
