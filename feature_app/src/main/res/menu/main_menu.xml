@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <group>
+
         <item
-                android:id="@+id/action_messages"
-                android:title="@string/message"
-                android:icon="@drawable/ic_mail"
+                android:id="@+id/action_home"
+                android:title="@string/home"
+                android:icon="@drawable/ic_home"
+                app:showAsAction="collapseActionView"/>
+
+        <item
+                android:id="@+id/action_demand"
+                android:title="@string/demand"
+                android:icon="@drawable/ic_business"
                 app:showAsAction="collapseActionView"/>
     <item
             android:id="@+id/action_settings"

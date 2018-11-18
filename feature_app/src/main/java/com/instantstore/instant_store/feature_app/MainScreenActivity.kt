@@ -1,7 +1,6 @@
 package com.instantstore.instant_store.feature_app
 
 import android.app.Activity
-import android.app.ActivityManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.NavigationView
@@ -10,7 +9,8 @@ import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.view.MenuItem
 import com.instantstore.instant_store.feature_app.fragments.FragmentAbout
-import com.instantstore.instant_store.feature_app.fragments.FragmentMessage
+import com.instantstore.instant_store.feature_app.fragments.FragmentDemand
+import com.instantstore.instant_store.feature_app.fragments.FragmentHome
 import com.instantstore.instant_store.feature_app.fragments.FragmentSettings
 import kotlinx.android.synthetic.main.activity_main_screen.*
 import kotlinx.android.synthetic.main.app_bar_drawer.*
@@ -43,6 +43,10 @@ class MainScreenActivity : AppCompatActivity() , NavigationView.OnNavigationItem
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle presses on the action bar menu items
         when (item.itemId) {
+            R.id.action_home -> {
+//                message.text = "set"
+                fragmentManager.beginTransaction().replace(R.id.fragment_main_screen,FragmentHome()).commit()
+            }
             R.id.action_settings -> {
 //                message.text = "set"
                 fragmentManager.beginTransaction().replace(R.id.fragment_main_screen,FragmentSettings()).commit()
@@ -51,9 +55,9 @@ class MainScreenActivity : AppCompatActivity() , NavigationView.OnNavigationItem
 //                message.text = "about"
                 fragmentManager.beginTransaction().replace(R.id.fragment_main_screen,FragmentAbout()).commit()
             }
-            R.id.action_messages -> {
+            R.id.action_demand -> {
 //                message.text = "message"
-                fragmentManager.beginTransaction().replace(R.id.fragment_main_screen,FragmentMessage()).commit()
+                fragmentManager.beginTransaction().replace(R.id.fragment_main_screen,FragmentDemand()).commit()
             }else -> {
             }
         }
