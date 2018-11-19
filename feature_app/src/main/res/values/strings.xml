@@ -12,4 +12,8 @@
     <string name="home">Home</string>
     <string name="tv_loginhere">Login Here</string>
     <string name="btnlogg">Login with Google</string>
+    <string name="tvsign_up">Sign Up</string>
+    <string name="tvconfirm_password">Confirm Password</string>
+    <string name="tvusername">User Name</string>
+    <string name="btnsign_up_with_google">Sign Up with Google</string>
 </resources>
