@@ -19,6 +19,7 @@ class MainScreenActivity : AppCompatActivity() , NavigationView.OnNavigationItem
 
     lateinit var fragmentManager: FragmentManager
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_screen)
@@ -27,6 +28,7 @@ class MainScreenActivity : AppCompatActivity() , NavigationView.OnNavigationItem
         setSupportActionBar(toolbar)
 
         init()
+
     }
 
 
@@ -65,7 +67,6 @@ class MainScreenActivity : AppCompatActivity() , NavigationView.OnNavigationItem
         return true
 
     }
-
 
 
 }

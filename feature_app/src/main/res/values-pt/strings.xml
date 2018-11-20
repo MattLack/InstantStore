@@ -14,7 +14,7 @@
     <string name="btnlogg">Login com Google</string>
     <string name="tvsign_up">Cadastrar</string>
     <string name="tvconfirm_password">Confirme sua Senha</string>
-    <string name="tvusername">Nome do usuário</string>
+    <string name="tvusername">Digite um nome para seu usuário</string>
     <string name="btnsign_up_with_google">Cadastre com Google</string>
     <string name="tvTitlAbout">Instant Store inc.</string>
     <string name="tvgitCaio">\@caiocbv</string>
