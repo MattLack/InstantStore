@@ -16,4 +16,8 @@
     <string name="tvconfirm_password">Confirm Password</string>
     <string name="tvusername">User Name</string>
     <string name="btnsign_up_with_google">Sign Up with Google</string>
+    <string name="tvTitlAbout">Instant Store inc.</string>
+    <string name="tvgitCaio">\@caiocbv</string>
+    <string name="tvgitMat">\@MattLack</string>
+    <string name="tvTxtAb">Developed to the discipline of Mobile Development - UFRPE 2018.2</string>
 </resources>
