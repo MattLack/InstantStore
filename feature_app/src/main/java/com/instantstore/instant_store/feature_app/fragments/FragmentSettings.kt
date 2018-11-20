@@ -6,18 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.instantstore.instant_store.feature_app.R
 
 class FragmentSettings : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_1,container, false)
-
-        val title = view.findViewById<TextView>(R.id.title)
-
-        title.text = "Fragment Settings"
-        //title.setTextColor(resources.getColor(R.color.colorAccent, null))
-
-        return view
+        TODO()
     }
+
 }
