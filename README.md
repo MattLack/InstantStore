@@ -35,6 +35,7 @@ Project Mobile in Kotlin language
  - {Fragment screen configuration Part1 kotlin} https://www.youtube.com/watch?v=mAFXFRiJbxw
  - {Fragment screen configuration Part2 kotlin} https://www.youtube.com/watch?v=6Vpo9I3RcsI
  - {List view with Images} https://www.youtube.com/watch?v=Ez5l8H-rkUQ
+ - {Grid view kotlin} https://grokonez.com/android/kotlin-gridview-example-show-list-of-items-on-grid-android
  
  
  
