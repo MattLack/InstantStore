@@ -17,9 +17,10 @@
             android:hint="@string/tvusername"
             tools:ignore="MissingConstraints"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="144dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="144dp" android:layout_marginTop="12dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintHorizontal_bias="0.0"/>
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/txtemail"
+            app:layout_constraintTop_toTopOf="parent"/>
     <EditText
             android:layout_width="395dp"
             android:layout_height="wrap_content"
@@ -29,9 +30,10 @@
             android:hint="@string/txtHintEmail"
             tools:ignore="MissingConstraints"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="144dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="144dp" android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtusername" app:layout_constraintHorizontal_bias="0.0"/>
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtusername"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/txtpass"/>
     <EditText
             android:layout_width="395dp"
             android:layout_height="wrap_content"
@@ -42,8 +44,9 @@
             tools:ignore="MissingConstraints"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="144dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="144dp" android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtpass"/>
+            android:layout_marginStart="144dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtpass"
+            app:layout_constraintHorizontal_bias="1.0"/>
     <EditText
             android:layout_width="395dp"
             android:layout_height="wrap_content"
@@ -53,48 +56,40 @@
             android:hint="@string/txtHintPassword"
             tools:ignore="MissingConstraints"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="144dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="144dp" android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtemail" app:layout_constraintHorizontal_bias="0.0"/>
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtemail"
+            android:layout_marginBottom="15dp" app:layout_constraintBottom_toTopOf="@+id/txtconfirmpass"/>
 
     <Button
             android:text="@string/tvsign_up"
-            android:layout_width="290dp"
-            android:layout_height="47dp"
+            android:layout_width="174dp"
+            android:layout_height="43dp"
             android:id="@+id/btnlogin"
             android:textStyle="bold"
             android:textColor="#ffffff"
             android:background="@drawable/buttonshapecollor"
             android:onClick="goToMainScreenActvity"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="52dp" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/btncadastr" android:layout_marginTop="35dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtconfirmpass" app:layout_constraintHorizontal_bias="0.0"
-            android:layout_marginBottom="17dp" app:layout_constraintBottom_toBottomOf="parent"/>
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/btncadastr" app:layout_constraintHorizontal_bias="0.751"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/txtconfirmpass"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
     <Button
             android:text="@string/btnsign_up_with_google"
             android:textColor="#5555ff"
             android:background="@null"
-            android:layout_width="246dp"
-            android:layout_height="63dp"
+            android:layout_width="168dp"
+            android:layout_height="51dp"
             android:id="@+id/btncadastr"
             android:drawableLeft="@drawable/icons8google48"
             android:textSize="18sp"
             android:onClick="goToMainScreenActvity"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="60dp" android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtconfirmpass" android:layout_marginBottom="13dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="1.0"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView"
-            android:textSize="20dp"
-            android:text="@string/tvsign_up"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="280dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="334dp" android:layout_marginTop="16dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/btnlogin"
+            android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtconfirmpass"/>
 
 
 </android.support.constraint.ConstraintLayout>

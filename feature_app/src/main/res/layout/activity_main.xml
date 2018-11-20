@@ -16,23 +16,24 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="48dp"
             app:layout_constraintTop_toTopOf="parent"
             android:id="@+id/linearLayoutCompat2"
-            android:layout_marginTop="100dp">
+            android:layout_marginTop="100dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0">
 
     </android.support.v7.widget.LinearLayoutCompat>
     <Button
             android:text="@string/btncadastr"
             android:textColor="#5555ff"
             android:background="@null"
-            android:layout_width="163dp"
-            android:layout_height="42dp"
+            android:layout_width="146dp"
+            android:layout_height="58dp"
             app:layout_constraintBottom_toBottomOf="parent"
             android:id="@+id/btnmainsign"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="36dp"
-            android:onClick="goToSignUpActvity" android:layout_marginBottom="60dp"
+            android:onClick="goToSignUpActvity" android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2"
-            app:layout_constraintVertical_bias="1.0"/>
+            app:layout_constraintVertical_bias="0.595"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnmainlogin" android:layout_marginStart="1dp"/>
     <Button
             android:text="@string/btnlogin"
             android:layout_width="146dp"
@@ -40,15 +41,16 @@
             android:textStyle="bold"
             android:textColor="#ffffff"
             android:background="@drawable/buttonshapecollor"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="44dp"
             android:onClick="gotoLoginActivity"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2"
-            app:layout_constraintVertical_bias="0.744"
-            android:id="@+id/btnmainlogin" tools:ignore="OnClick"/>
+            app:layout_constraintVertical_bias="0.595"
+            android:id="@+id/btnmainlogin" tools:ignore="OnClick"
+            app:layout_constraintEnd_toStartOf="@+id/btnmainsign" android:layout_marginEnd="1dp"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"/>
 
 
 </android.support.constraint.ConstraintLayout>
