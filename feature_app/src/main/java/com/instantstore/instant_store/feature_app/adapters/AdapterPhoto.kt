@@ -16,7 +16,7 @@ class AdapterPhoto (var context:Context, var data:ArrayList<Photo>): BaseAdapter
     lateinit var txt:TextView
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        var view = LayoutInflater.from(context).inflate(R.layout.layout_center_view_profile,parent,false)
+        var view = LayoutInflater.from(context).inflate(R.layout.photo_entry,parent,false)
 
         img = view.findViewById(R.id.imgId)
         txt = view.findViewById(R.id.tvName)
