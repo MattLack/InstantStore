@@ -3,6 +3,7 @@ package com.instantstore.instant_store.feature_app
 import android.app.Activity
 import android.os.Bundle
 import android.support.design.widget.NavigationView
+import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
@@ -28,8 +29,8 @@ class MainScreenActivity : AppCompatActivity() , NavigationView.OnNavigationItem
         setSupportActionBar(toolbar)
 
         init()
-        //val fragment = FragmentHome.newInstance()
-        //replaceFragment(fragment)
+        val fragment = FragmentHome.newInstance()
+        replaceFragment(fragment)
 
     }
 
@@ -42,12 +43,12 @@ class MainScreenActivity : AppCompatActivity() , NavigationView.OnNavigationItem
         toogle.syncState()
         navigation_view.setNavigationItemSelectedListener(this)
     }
-/*
+
     private fun replaceFragment(fragment: Fragment) {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.fragment_main_screen, fragment)
         fragmentTransaction.commit()
-    }*/
+    }
 
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

@@ -16,14 +16,14 @@
                 android:id="@+id/conf_node_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 tools:text="Titulo" />
 
         <TextView
                 android:id="@+id/note_item_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 tools:text="Descrição" />
 
     </LinearLayout>
