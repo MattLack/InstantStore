@@ -37,7 +37,7 @@ class LoginActivity : AppCompatActivity() {
 
     fun signIn(view : View) {
 
-        mAuth!!.signInWithEmailAndPassword(txtemail.toString(),txtpass.text.toString())
+        mAuth!!.signInWithEmailAndPassword(txtemail.text.toString(),txtpass.text.toString())
 
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {

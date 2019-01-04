@@ -30,4 +30,5 @@
     <string name="hint_phoneform">Your phone</string>
     <string name="btn_photoform">Send your order</string>
     <string name="upload_image">Upload Image</string>
+    <string name="btn_choseImage">Chose a Image</string>
 </resources>
