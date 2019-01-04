@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+            android:layout_width="149dp"
+            android:layout_height="152dp" app:srcCompat="@drawable/caio"
+            android:id="@+id/imageView5" android:src="@drawable/mateus"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp" app:layout_constraintStart_toEndOf="@+id/tvTitlAbout"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvgitMat"/>
+    <TextView
+            android:text="@string/tvTitlAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:id="@+id/tvTitlAbout" android:layout_marginEnd="176dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="177dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.495" android:layout_marginBottom="60dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvTxtAb"/>
+    <ImageView
+            android:layout_width="149dp"
+            android:layout_height="152dp" app:srcCompat="@drawable/caio"
+            android:id="@+id/imageView4" android:src="@drawable/caio"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/tvTitlAbout"
+            android:layout_marginEnd="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/tvgitCaio"/>
+    <TextView
+            android:text="@string/tvTxtAb"
+            android:layout_width="348dp"
+            android:layout_height="93dp"
+            android:textSize="25sp"
+            android:id="@+id/tvTxtAb" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/tvTitlAbout"
+            app:layout_constraintVertical_bias="0.585"/>
+    <TextView
+            android:text="@string/tvgitCaio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvgitCaio"
+            android:textSize="25sp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/tvTxtAb"
+            app:layout_constraintVertical_bias="0.673"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toStartOf="@+id/tvgitMat"
+            app:layout_constraintHorizontal_bias="0.212"/>
+    <TextView
+            android:text="@string/tvgitMat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvgitMat"
+            android:textSize="25sp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvTxtAb" app:layout_constraintVertical_bias="0.67"
+            android:layout_marginEnd="136dp" app:layout_constraintEnd_toEndOf="parent"/>
+</android.support.constraint.ConstraintLayout>

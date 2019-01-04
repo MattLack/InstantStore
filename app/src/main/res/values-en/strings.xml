@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="txtHintPassword">Password</string>
+    <string name="txtHintEmail">E-mail</string>
+    <string name="btnlogin">Login</string>
+    <string name="btncadastr">Sign Up</string>
+    <string name="menu_action_settings">Settings</string>
+    <string name="menu_action_about_us">About Us</string>
+    <string name="demand">Demand</string>
+    <string name="nav_open">Nav Bar open</string>
+    <string name="nav_close">Nav Bar close</string>
+    <string name="home">Home</string>
+    <string name="tv_loginhere">Login Here</string>
+    <string name="btnlogg">Login with Google</string>
+    <string name="tvsign_up">Sign Up</string>
+    <string name="tvconfirm_password">Confirm Password</string>
+    <string name="tvusername">User Name</string>
+    <string name="btnsign_up_with_google">Sign Up with Google</string>
+    <string name="tvTitlAbout">Instant Store inc.</string>
+    <string name="tvgitCaio">\@caiocbv</string>
+    <string name="tvgitMat">\@MattLack</string>
+    <string name="tvTxtAb">Developed to the discipline of Mobile Development - UFRPE 2018.2</string>
+    <string name="textPosts">Posts</string>
+    <string name="textFollowers">Followers</string>
+    <string name="textFollolwing">Following</string>
+    <string name="btn_photodetail">purchase</string>
+    <string name="hint_form">Your comment</string>
+    <string name="btn_photoform">Send your order</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="hint_emailform">Your e-mail</string>
+    <string name="hint_phoneform">Your phone</string>
+</resources>

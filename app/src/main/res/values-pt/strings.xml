@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="txtHintPassword">Digite sua Senha</string>
+    <string name="txtHintEmail">Digite seu E-mail</string>
+    <string name="btnlogin">Entrar</string>
+    <string name="btncadastr">Cadastrar</string>
+    <string name="menu_action_settings">Configurações</string>
+    <string name="menu_action_about_us">Sobre nós</string>
+    <string name="demand">Pedidos</string>
+    <string name="nav_open">Barra de navegação aberta</string>
+    <string name="nav_close">Barra de navegação encerrada</string>
+    <string name="home">Inicio</string>
+    <string name="tv_loginhere">Faça seu Login aqui:</string>
+    <string name="btnlogg">Login com Google</string>
+    <string name="tvsign_up">Cadastrar</string>
+    <string name="tvconfirm_password">Confirme sua Senha</string>
+    <string name="tvusername">Digite um nome para seu usuário</string>
+    <string name="btnsign_up_with_google">Cadastre com Google</string>
+    <string name="tvTitlAbout">Instant Store inc.</string>
+    <string name="tvgitCaio">\@caiocbv</string>
+    <string name="tvgitMat">\@MattLack</string>
+    <string name="tvTxtAb">Desenvolvido para a disciplina de Desenvolvimento de Aplicações Móveis - UFRPE 2018.2</string>
+    <string name="textPosts">Publicações</string>
+    <string name="textFollowers">Seguidores</string>
+    <string name="textFollolwing">Seguindo</string>
+    <string name="upload_image">Enviar Imagem</string>
+    <string name="btn_photoform">Faça seu Pedido</string>
+    <string name="hint_phoneform">Seu Telefone</string>
+    <string name="hint_emailform">Seu E-mail</string>
+    <string name="hint_form">Seu Pedido</string>
+    <string name="btn_photodetail">comprar</string>
+</resources>

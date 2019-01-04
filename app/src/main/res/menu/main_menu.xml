@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group>
+
+        <item
+                android:id="@+id/action_home"
+                android:title="@string/home"
+                android:icon="@drawable/ic_home"
+                app:showAsAction="collapseActionView"/>
+        <item
+                android:id="@+id/action_upload"
+                android:title="@string/upload_image"
+                android:icon="@drawable/ic_upload"
+                app:showAsAction="collapseActionView"/>
+
+        <item
+                android:id="@+id/action_demand"
+                android:title="@string/demand"
+                android:icon="@drawable/ic_business"
+                app:showAsAction="collapseActionView"/>
+    <item
+            android:id="@+id/action_settings"
+            android:title="@string/menu_action_settings"
+            android:icon="@drawable/ic_settings"
+            app:showAsAction="collapseActionView"/>
+
+    <item
+            android:id="@+id/action_about_us"
+            android:title="@string/menu_action_about_us"
+            android:icon="@drawable/ic_about"
+            app:showAsAction="collapseActionView"/>
+    </group>
+</menu>
