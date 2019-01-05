@@ -1,6 +1,7 @@
 package ufrpe.mobile.instantstore
 
 import android.app.Activity
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.NavigationView
@@ -74,7 +75,8 @@ class MainScreenActivity : AppCompatActivity() , NavigationView.OnNavigationItem
             }
             R.id.action_upload -> {
 //                message.text = "message"
-                fragmentManager.beginTransaction().replace(R.id.fragment_main_screen, FragmentUpload()).commit()
+                val intent = Intent(applicationContext,UploadActivity::class.java)
+                startActivity(intent)
             }else -> {
         }
         }

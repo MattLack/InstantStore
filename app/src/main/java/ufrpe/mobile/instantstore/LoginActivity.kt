@@ -37,18 +37,23 @@ class LoginActivity : AppCompatActivity() {
 
     fun signIn(view : View) {
 
-        mAuth!!.signInWithEmailAndPassword(txtemail.text.toString(),txtpass.text.toString())
+        if(txtemail.text.toString() != null && txtemail.text.toString() != ""
+            && txtpass.text.toString() != null && txtpass.text.toString() != "" ) {
+            mAuth!!.signInWithEmailAndPassword(txtemail.text.toString(), txtpass.text.toString())
 
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    val intent = Intent(applicationContext, MainScreenActivity::class.java)
-                    startActivity(intent)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        val intent = Intent(applicationContext, MainScreenActivity::class.java)
+                        startActivity(intent)
+                    }
                 }
-            }
+                .addOnFailureListener { exception ->
+                    Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG).show()
+                }
 
-            .addOnFailureListener { exception ->
-                Toast.makeText(applicationContext,exception.localizedMessage, Toast.LENGTH_LONG).show()
-            }
+        }else {
+            Toast.makeText(applicationContext, "Insert a valid email and password", Toast.LENGTH_LONG).show()
+        }
 
     }
 
@@ -61,3 +66,5 @@ class LoginActivity : AppCompatActivity() {
 
     }
 }
+
+

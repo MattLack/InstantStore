@@ -1,13 +1,12 @@
 package ufrpe.mobile.instantstore.adapter
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.widget.ArrayAdapter
 import ufrpe.mobile.instantstore.R
 import ufrpe.mobile.instantstore.model.Photo
 
 
-class UploadPhotoAdapter (private val posts: ArrayList<Photo>, private val context: Activity) : ArrayAdapter<Photo>(context,R.layout.fragment_upload, posts){
+class UploadPhotoAdapter (private val posts: ArrayList<Photo>, private val context: Activity) : ArrayAdapter<Photo>(context,R.layout.activity_upload, posts){
 
     val layoutInflater = context.layoutInflater
 

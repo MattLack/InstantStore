@@ -11,36 +11,38 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/btn_choseimage"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" android:layout_marginBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/img_uploaded" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="76dp" app:layout_constraintVertical_bias="0.204"
-            android:text="@string/btn_choseImage"/>
+            android:layout_marginStart="8dp" app:layout_constraintVertical_bias="0.204"
+            android:text="@string/btn_choseImage" app:layout_constraintEnd_toStartOf="@+id/btn_uploadimage"
+            android:layout_marginEnd="43dp" android:onClick="selectImage"/>
     <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/img_uploaded"
             android:layout_width="288dp"
             android:layout_height="185dp"
-            android:layout_marginEnd="61dp"
-            android:layout_marginStart="55dp"
-            android:onClick="selectImage"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:onClick="selectImage"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.857" app:layout_constraintVertical_bias="0.267"/>
+            app:layout_constraintHorizontal_bias="0.495" app:layout_constraintVertical_bias="0.148"
+            android:layout_marginTop="8dp" android:layout_marginBottom="8dp" app:srcCompat="@drawable/ic_upload"/>
 
     <Button
             android:id="@+id/btn_uploadimage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="upload"
-            android:text="Upload"
+            android:text="@string/upload"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginEnd="40dp"
-            android:layout_marginBottom="176dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/img_uploaded"
             app:layout_constraintStart_toEndOf="@+id/btn_choseimage"
-            android:layout_marginStart="8dp"/>
+            android:layout_marginStart="8dp" app:layout_constraintVertical_bias="0.204"
+            android:onClick="upload"/>
 
 
 </android.support.constraint.ConstraintLayout>
