@@ -36,8 +36,12 @@ Project Mobile in Kotlin language
  - {List view with Images} https://www.youtube.com/watch?v=Ez5l8H-rkUQ
  - {Grid view kotlin} https://grokonez.com/android/kotlin-gridview-example-show-list-of-items-on-grid-android
  - {Circle image border} https://github.com/hdodenhof/CircleImageView
-  - {GridLayoutManager and StaggeredGridLayoutManager} https://www.android4dev.com/how-to-use-recyclerview-with-staggeredgridlayoutmanager-android-kotlin/
+ - {GridLayoutManager and StaggeredGridLayoutManager} https://www.android4dev.com/how-to-use-recyclerview-with-staggeredgridlayoutmanager-android-kotlin/
  - {Android Kotlin Tutorial: Link RecyclerView } https://www.youtube.com/watch?v=HXz6618Zzn8&list=PLlxmoA0rQ-Lw5k_QCqVl3rsoJOnb_00UV&index=16
+ - {Tutorial Fragment} https://www.raywenderlich.com/361-android-fragments-tutorial-an-introduction-with-kotlin
+ - {Firebase 1} https://firebase.google.com/docs/auth/android/google-signin
+ - {Firebase 2} https://medium.com/@myric.september/authenticate-using-google-sign-in-kotlin-firebase-4490f71d9e44
+ - {Firebase 3} https://www.youtube.com/watch?v=i18IGN3MAbw
  
  
  
