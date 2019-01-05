@@ -1,5 +1,7 @@
 package ufrpe.mobile.instantstore.fragment
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
@@ -7,6 +9,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import ufrpe.mobile.instantstore.MainScreenActivity
 import ufrpe.mobile.instantstore.R
 import ufrpe.mobile.instantstore.adapter.PhotoAdapter
 import ufrpe.mobile.instantstore.model.Photo
@@ -46,6 +49,9 @@ class FragmentHome : Fragment() {
     }
 
     companion object {
+        fun getLaunchIntent(from: Context) = Intent(from, MainScreenActivity::class.java).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        }
         fun newInstance() = FragmentHome()
     }
 
