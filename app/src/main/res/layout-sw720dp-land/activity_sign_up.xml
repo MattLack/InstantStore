@@ -68,7 +68,7 @@
             android:text="@string/tvsign_up"
             android:layout_width="195dp"
             android:layout_height="55dp"
-            android:id="@+id/btn_photoform"
+            android:id="@+id/btn_signup"
             android:textStyle="bold"
             android:textColor="#ffffff"
             android:textSize="20sp"
@@ -94,7 +94,7 @@
             app:layout_constraintTop_toBottomOf="@+id/txtconfirmpass" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.581"
-            app:layout_constraintStart_toEndOf="@+id/btn_photoform" android:layout_marginStart="8dp"/>
+            app:layout_constraintStart_toEndOf="@+id/btn_signup" android:layout_marginStart="8dp"/>
     <ImageView
             android:src="@drawable/ic_account_circle_200dp"
             android:layout_width="286dp"

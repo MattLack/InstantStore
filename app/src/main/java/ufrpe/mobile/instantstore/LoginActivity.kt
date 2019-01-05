@@ -1,8 +1,6 @@
 package ufrpe.mobile.instantstore
 
-import android.content.Context
 import android.content.Intent
-import android.os.AsyncTask
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -24,7 +22,6 @@ class LoginActivity : AppCompatActivity() {
 
     var mAuth: FirebaseAuth? = null
     var mAuthListener: FirebaseAuth.AuthStateListener? = null
-    private var idToken = "y0Qf8kJtSzjfQRf2qNUvPaQs"
     val RC_SIGN_IN: Int = 1
     lateinit var mGoogleSignInClient: GoogleSignInClient
     lateinit var mGoogleSignInOptions: GoogleSignInOptions
@@ -42,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
             .build()
 
         mGoogleSignInClient = GoogleSignIn.getClient(this,mGoogleSignInOptions)
-        
+
         val signbtnGoogle = findViewById<View>(R.id.google_button) as SignInButton
         signbtnGoogle.setOnClickListener {
             view: View? -> signInGoogle()
@@ -91,7 +88,6 @@ class LoginActivity : AppCompatActivity() {
         if (requestCode == RC_SIGN_IN) {
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
             handleResult(task)
-
         }
     }
 

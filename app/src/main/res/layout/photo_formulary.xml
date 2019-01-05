@@ -12,7 +12,7 @@
             android:text="@string/btn_photoform"
             android:layout_width="290dp"
             android:layout_height="47dp"
-            android:id="@+id/btn_photoform"
+            android:id="@+id/btn_signup"
             android:textStyle="bold"
             android:textColor="#ffffff"
             android:background="@drawable/buttonshapecollor"
@@ -63,7 +63,7 @@
             android:id="@+id/txt_phoneform" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" android:layout_marginBottom="36dp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_photoform" app:layout_constraintHorizontal_bias="0.0"/>
+            app:layout_constraintBottom_toTopOf="@+id/btn_signup" app:layout_constraintHorizontal_bias="0.0"/>
 
 
 </android.support.constraint.ConstraintLayout>

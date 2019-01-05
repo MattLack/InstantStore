@@ -35,7 +35,7 @@
             android:text="@string/btnlogin"
             android:layout_width="232dp"
             android:layout_height="47dp"
-            android:id="@+id/btn_photoform"
+            android:id="@+id/btn_signup"
             android:textStyle="bold"
             android:textColor="#ffffff"
             android:background="@drawable/buttonshapecollor"
@@ -62,7 +62,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/txtpass" app:layout_constraintVertical_bias="0.56"
-            app:layout_constraintStart_toEndOf="@+id/btn_photoform" android:layout_marginStart="8dp"/>
+            app:layout_constraintStart_toEndOf="@+id/btn_signup" android:layout_marginStart="8dp"/>
     <ImageView
             android:layout_width="141dp"
             android:layout_height="125dp"
