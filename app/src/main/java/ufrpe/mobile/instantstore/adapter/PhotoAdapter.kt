@@ -25,7 +25,7 @@ class PhotoAdapter(val photos : ArrayList<Photo>, val context: Context) : Recycl
 
     // Binds each animal in the ArrayList to a view
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.imgView.setImageResource(photos.get(position).img)
+        //holder.imgView.setImageResource( photos.get(position).img )
         //holder.texto.text = "testando"
     }
 }

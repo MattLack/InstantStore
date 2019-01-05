@@ -2,12 +2,12 @@ package ufrpe.mobile.instantstore
 
 import android.Manifest
 import android.app.Activity
-import android.app.ListActivity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.support.v4.app.FragmentManager
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
@@ -17,6 +17,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_upload.*
+import ufrpe.mobile.instantstore.R.drawable.ic_upload
 import ufrpe.mobile.instantstore.fragment.FragmentHome
 import java.util.*
 
@@ -29,6 +30,10 @@ class UploadActivity : AppCompatActivity() {
     var firebaseDatabase: FirebaseDatabase? = null
     var dbRef: DatabaseReference? = null
     var mStorageRef: StorageReference? = null
+    lateinit var fragmentManager: FragmentManager
+
+    private val PICK_IMAGE_REQUEST = 1
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +43,7 @@ class UploadActivity : AppCompatActivity() {
         firebaseDatabase = FirebaseDatabase.getInstance()
         dbRef = firebaseDatabase!!.reference
         mStorageRef = FirebaseStorage.getInstance().reference
+
     }
 
 
@@ -71,9 +77,8 @@ class UploadActivity : AppCompatActivity() {
 
         uploadTask.addOnCompleteListener { task ->
             if (task.isComplete) {
-                Toast.makeText(applicationContext, "City added", Toast.LENGTH_LONG).show()
-                val intent = Intent(applicationContext, FragmentHome::class.java)
-                startActivity(intent)
+                img_uploaded.setImageResource(ic_upload)
+                Toast.makeText(applicationContext, "Upload Completed!", Toast.LENGTH_LONG).show()
             }
         }
 
@@ -90,12 +95,6 @@ class UploadActivity : AppCompatActivity() {
 
     }
 
-
-    fun testfun(view: View){
-        Toast.makeText(applicationContext, "que merda", Toast.LENGTH_LONG).show()
-    }
-
-
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
 
         if (requestCode == 1) {
@@ -106,7 +105,6 @@ class UploadActivity : AppCompatActivity() {
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
-
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
 
@@ -121,5 +119,17 @@ class UploadActivity : AppCompatActivity() {
         }
         super.onActivityResult(requestCode, resultCode, data)
     }
+
+    fun backScreen(view : View){
+        val intent = Intent(applicationContext,MainScreenActivity::class.java)
+        // intent.putExtra("input",editText.text.toString())
+        startActivity(intent)
+    }
+
+
+
+
+
+
 
 }

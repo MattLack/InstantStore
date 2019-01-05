@@ -1,3 +1,3 @@
 package ufrpe.mobile.instantstore.model
 
-data class Photo(var img:Int,var txt:String)
+data class Photo(val img: String?, val txt: String?)

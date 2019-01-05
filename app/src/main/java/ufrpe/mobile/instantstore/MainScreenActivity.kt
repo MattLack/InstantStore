@@ -1,6 +1,7 @@
 package ufrpe.mobile.instantstore
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -35,6 +36,10 @@ class MainScreenActivity : AppCompatActivity() , NavigationView.OnNavigationItem
             replaceFragment(fragment)
         }*/
 
+    }
+
+    override fun getApplicationContext(): Context {
+        return super.getApplicationContext()
     }
 
 

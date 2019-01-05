@@ -1,4 +1,4 @@
 package ufrpe.mobile.instantstore.model
 
-data class Demand (var img:Int,var id:String, var data:String) {
+data class Demand (val img:String?,val id:String?, val user:String?,val text:String?) {
 }
