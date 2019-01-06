@@ -80,8 +80,9 @@ class MainScreenActivity : AppCompatActivity() , NavigationView.OnNavigationItem
             }
             R.id.action_upload -> {
 //                message.text = "message"
-                val intent = Intent(applicationContext, UploadActivity::class.java)
-                startActivity(intent)
+                fragmentManager.beginTransaction().replace(R.id.fragment_main_screen, FragmentUpload()).commit()
+                /*val intent = Intent(applicationContext, UploadActivity::class.java)
+                startActivity(intent)*/
             }else -> {
         }
         }

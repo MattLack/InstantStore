@@ -1,4 +1,4 @@
-package ufrpe.mobile.instantstore
+package ufrpe.mobile.instantstore.fragment
 
 import android.app.Activity
 import android.app.ProgressDialog
@@ -6,31 +6,35 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
-import android.support.v7.app.AppCompatActivity
+import android.support.v4.app.Fragment
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_upload.*
-import ufrpe.mobile.instantstore.R.drawable.ic_upload
+import kotlinx.android.synthetic.main.activity_upload.view.*
+import ufrpe.mobile.instantstore.MainScreenActivity
+import ufrpe.mobile.instantstore.R
 import java.io.IOException
 import java.util.*
-import kotlin.collections.HashMap
 
-class UploadActivity : AppCompatActivity() {
+class FragmentUpload : Fragment() {
 
-
+    var resolver = activity!!.contentResolver
     private val PICK_IMAGE_REQUEST = 1234
     private var filePath: Uri? = null
     lateinit var db: FirebaseFirestore
     lateinit var notesCollectionRef: CollectionReference
     var mAuth: FirebaseAuth? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_upload)
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val view = inflater.inflate(R.layout.activity_upload, container, false)
 
         mAuth = FirebaseAuth.getInstance()
 
@@ -42,6 +46,20 @@ class UploadActivity : AppCompatActivity() {
         // Reference to a Collection
         notesCollectionRef = db.collection("InstantStore")
 
+        //buttons
+        view.img_uploaded.setOnClickListener {
+            choseImageFragment()
+        }
+
+        view.btn_uploadimage.setOnClickListener {
+            uploadImageFragment()
+        }
+
+        view.btn_return.setOnClickListener {
+            backScreenFragment()
+        }
+
+        return view
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -53,7 +71,7 @@ class UploadActivity : AppCompatActivity() {
         ) {
             filePath = data.data
             try {
-                val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, filePath)
+                val bitmap = MediaStore.Images.Media.getBitmap(resolver, filePath)
                 img_uploaded.setImageBitmap(bitmap)
             } catch (e: IOException) {
                 e.printStackTrace()
@@ -62,11 +80,11 @@ class UploadActivity : AppCompatActivity() {
 
     }
 
-    fun choseImage(v: View?) {
+    private fun choseImageFragment() {
         showFileChooser()
     }
 
-    fun uploadImage(v: View?) {
+    private fun uploadImageFragment() {
         val userComment = textComment.text.toString()
         uploadImagetoFirebase(userComment)
     }
@@ -76,7 +94,7 @@ class UploadActivity : AppCompatActivity() {
         val filename = UUID.randomUUID().toString()
         val ref = FirebaseStorage.getInstance().getReference("/images/$filename")
 
-        val progressDialog = ProgressDialog(this)
+        val progressDialog = ProgressDialog(context)
         progressDialog.setTitle("Uploading...")
         progressDialog.show()
 
@@ -93,11 +111,11 @@ class UploadActivity : AppCompatActivity() {
             }
             .addOnFailureListener {
                 progressDialog.dismiss()
-                Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show()
             }
             .addOnCompleteListener { task ->
                 if (task.isComplete) {
-                    img_uploaded.setImageResource(ic_upload)
+                    img_uploaded.setImageResource(R.drawable.ic_upload)
                     textComment.setText("")
                 }
             }
@@ -113,9 +131,9 @@ class UploadActivity : AppCompatActivity() {
         uploadMap["imgUrl"] = imgurl
 
         db.collection("Post").add(uploadMap).addOnSuccessListener {
-            Toast.makeText(this, "Successfully uploaded to the database :)", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Successfully uploaded to the database :)", Toast.LENGTH_LONG).show()
         }.addOnFailureListener {
-            Toast.makeText(this, "deu ruim", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "deu ruim", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -127,8 +145,8 @@ class UploadActivity : AppCompatActivity() {
     }
 
 
-    fun backScreen(view: View) {
-        val intent = Intent(applicationContext, MainScreenActivity::class.java)
+    fun backScreenFragment() {
+        val intent = Intent(context, MainScreenActivity::class.java)
         startActivity(intent)
     }
 
