@@ -13,10 +13,10 @@ Project Mobile in Kotlin language
  **Houve auteração recente da API do Instagram, fazendo com que a [antiga API do Instagram](https://www.instagram.com/developer/) entrasse em DEPRECATED de forma imediata. A [nova API do Instagram](https://developers.facebook.com/docs/instagram-api/) necessita de implementação de backend para uso de Spring Social, o que não contempla a proposta deste projeto, então, decidiu-se o envio de imagens para o Firebase, via Firestore.**
   
 ### Principais Objetivos do App:
-~~1. Prover uma abstração simples de e-commerce online para pequenos empreendedores com a utilização de fotos do Instagram;~~
-2. Fornecer uma interface amigável ao Cliente/Administrador;
-3. Utilizar o conceito de Instants Apps para que a aplicação não precise ser instalada no smartphone;
-4. Oferecer um ambiente seguro aos usuários;
+~~-Prover uma abstração simples de e-commerce online para pequenos empreendedores com a utilização de fotos do Instagram;~~
+- Fornecer uma interface amigável ao Cliente/Administrador;
+- Utilizar o conceito de Instants Apps para que a aplicação não precise ser instalada no smartphone;
+- Oferecer um ambiente seguro aos usuários;
 
 ### Conceitos Técnicos:
 ~~- A camada de negócio dessa aplicação foca no uso da API do Instagram;~~
