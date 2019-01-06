@@ -9,6 +9,7 @@ Project Mobile in Kotlin language
 ### Conceito:
  ~~> O app Instant Store é aplicação mobile que visa fornecer a pequenos empreendedores uma alternativa, de interface amigável, para venda de produtos ou serviços associados ao conteúdo de contas comerciais do app Instagram.~~
  > O app Instant Store é aplicação mobile que visa fornecer a pequenos empreendedores uma alternativa, de interface amigável, para venda de produtos ou serviços associados ao conteúdos de mídia publicados na plataforma.
+ 
  **Houve auteração recente da API do Instagram, fazendo com que a [antiga API do Instagram](https://www.instagram.com/developer/) entrasse em DEPRECATED de forma imediata. A [nova API do Instagram](https://developers.facebook.com/docs/instagram-api/) necessita de implementação de backend para uso de Spring Social, o que não contempla a proposta deste projeto, então, decidiu-se o envio de imagens para o Firebase, via Firestore.**
   
 ### Principais Objetivos do App:
