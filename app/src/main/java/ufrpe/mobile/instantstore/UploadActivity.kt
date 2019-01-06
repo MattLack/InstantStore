@@ -17,6 +17,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_upload.*
+import kotlinx.android.synthetic.main.activity_upload.view.*
 import ufrpe.mobile.instantstore.R.drawable.ic_upload
 import ufrpe.mobile.instantstore.fragment.FragmentHome
 import java.util.*
@@ -59,10 +60,10 @@ class UploadActivity : AppCompatActivity() {
 
             val user = mAuth!!.currentUser
             val userEmail = user!!.email.toString()
-            //val userComment = commentText.text.toString()
+            val userComment = commentText.toString()
 
             dbRef!!.child("Posts").child(uuidString).child("userEmail").setValue(userEmail)
-            //dbRef!!.child("Posts").child(uuidString).child("txt").setValue(userComment)
+            dbRef!!.child("Posts").child(uuidString).child("txt").setValue(userComment)
 
             storageReference.getDownloadUrl().addOnSuccessListener { uri ->
                 dbRef!!.child("Posts").child(uuidString).child("imageUrl").setValue(uri.toString())

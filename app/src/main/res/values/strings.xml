@@ -33,4 +33,5 @@
     <string name="btn_choseImage">Chose a Image</string>
     <string name="upload">Upload</string>
     <string name="btn_return">Return to Home</string>
+    <string name="comment">Add a comment</string>
 </resources>

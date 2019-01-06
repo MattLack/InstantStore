@@ -6,24 +6,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/btn_choseimage"
-            android:text="@string/btn_choseImage"
-            android:onClick="selectImage"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginTop="16dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.082"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/img_uploaded"/>
     <ImageView
             android:id="@+id/img_uploaded"
             android:layout_width="match_parent"
             android:layout_height="360dp"
             android:onClick="selectImage"
             app:srcCompat="@drawable/ic_upload"
-            android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.358"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"/>
 
@@ -31,14 +21,13 @@
             android:id="@+id/btn_uploadimage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/btn_choseimage"
             android:text="@string/upload"
             android:onClick="upload"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toStartOf="@+id/btn_return" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/img_uploaded"/>
+            app:layout_constraintTop_toBottomOf="@+id/img_uploaded" app:layout_constraintVertical_bias="0.821"/>
 
     <Button
             android:layout_width="wrap_content"
@@ -50,7 +39,22 @@
             android:layout_marginEnd="8dp"
             app:layout_constraintStart_toEndOf="@+id/btn_uploadimage" android:layout_marginStart="8dp"
             android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/img_uploaded"
-            android:onClick="backScreen"/>
+            android:onClick="backScreen" app:layout_constraintVertical_bias="0.821"/>
+
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="103dp"
+            app:layout_constraintTop_toBottomOf="@+id/img_uploaded" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"
+            android:id="@+id/commentText">
+
+        <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/comment"/>
+    </android.support.design.widget.TextInputLayout>
 
 
 </android.support.constraint.ConstraintLayout>

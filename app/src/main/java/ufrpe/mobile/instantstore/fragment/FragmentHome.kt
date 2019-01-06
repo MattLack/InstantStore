@@ -32,15 +32,7 @@ class FragmentHome : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_view_profile,container, false)
 
-        /*data = ArrayList()
-
-        data.add(Photo(R.drawable.caio,"caio"))
-        data.add(Photo(R.drawable.mateus,"mateus"))
-        data.add(Photo(R.drawable.caio,"caio"))
-        data.add(Photo(R.drawable.mateus,"mateus"))
-        data.add(Photo(R.drawable.caio,"caio"))
-        data.add(Photo(R.drawable.mateus,"mateus"))
-
+        /*
         lv = view.findViewById(R.id.list_home)
 
         // Creates a vertical Layout Manager
@@ -48,14 +40,9 @@ class FragmentHome : Fragment() {
 
         // Access the RecyclerView Adapter and load the data into it
         lv.adapter = PhotoAdapter(data, requireContext())
+        */
 
-        /*
-            val title = view.findViewById<TextView>(R.id.title)
-            title.text = "Fragment Home"
-            title.setTextColor(resources.getColor(colorAccent, null))
-    **/
-*/
-        // new adapter
+        // new adapter implementation
 
         firebaseDatabase = FirebaseDatabase.getInstance()
         myRef = firebaseDatabase!!.getReference()
