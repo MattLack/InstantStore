@@ -11,7 +11,7 @@ import ufrpe.mobile.instantstore.R
 import ufrpe.mobile.instantstore.model.Photo
 
 
-class PhotoAdapter(val photos : ArrayList<Photo>, val context: Context) : RecyclerView.Adapter<ViewHolder>(){
+class PhotoAdapter(val photos: ArrayList<Photo>, val context: Context) : RecyclerView.Adapter<ViewHolder>() {
 
     // Gets the number of animals in the list
     override fun getItemCount(): Int {
@@ -20,7 +20,7 @@ class PhotoAdapter(val photos : ArrayList<Photo>, val context: Context) : Recycl
 
     // Inflates the item views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.photo_entry,parent, false))
+        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.photo_entry, parent, false))
     }
 
     // Binds each animal in the ArrayList to a view
@@ -30,7 +30,7 @@ class PhotoAdapter(val photos : ArrayList<Photo>, val context: Context) : Recycl
     }
 }
 
-class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
+class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     // Holds the TextView that will add each animal to
     val imgView: ImageView = view.imgId
     //val texto: TextView = view.tvName

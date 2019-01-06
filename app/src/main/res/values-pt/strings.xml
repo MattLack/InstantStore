@@ -9,7 +9,7 @@
     <string name="demand">Pedidos</string>
     <string name="nav_open">Barra de navegação aberta</string>
     <string name="nav_close">Barra de navegação encerrada</string>
-    <string name="home">Inicio</string>
+    <string name="home">Início</string>
     <string name="tv_loginhere">Faça seu Login aqui:</string>
     <string name="btnlogg">Login com Google</string>
     <string name="tvsign_up">Cadastrar</string>
@@ -29,4 +29,8 @@
     <string name="hint_emailform">Seu E-mail</string>
     <string name="hint_form">Seu Pedido</string>
     <string name="btn_photodetail">comprar</string>
+    <string name="upload">Enviar</string>
+    <string name="btn_return">Retornar para Home</string>
+    <string name="comment">Adicione um comentário</string>
+    <string name="conf_logout">Sair</string>
 </resources>

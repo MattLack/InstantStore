@@ -11,7 +11,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.layout_center_view_profile.*
 import ufrpe.mobile.instantstore.MainScreenActivity
 import ufrpe.mobile.instantstore.R
 import ufrpe.mobile.instantstore.adapter.PhotoAdapter
@@ -89,7 +88,7 @@ class FragmentHome : Fragment() {
                 for (snapshot in p0.children) {
                     val hashMap = snapshot.value as HashMap<String, String>
                     if (hashMap.size > 0) {
-                        val photoPost = Photo(hashMap["userEmail"], hashMap["imageUrl"])
+                        val photoPost = Photo(hashMap["imageUrl"], hashMap["text"],hashMap["userEmail"])
                         data.add(photoPost)
                         postAdapter!!.notifyDataSetChanged()
                     }

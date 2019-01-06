@@ -32,18 +32,18 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up)
 
         mAuth = FirebaseAuth.getInstance()
-        mAuthListener = FirebaseAuth.AuthStateListener {  }
+        mAuthListener = FirebaseAuth.AuthStateListener { }
 
         mGoogleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
 
-        mGoogleSignInClient = GoogleSignIn.getClient(this,mGoogleSignInOptions)
+        mGoogleSignInClient = GoogleSignIn.getClient(this, mGoogleSignInOptions)
 
         val signbtnGoogle = findViewById<View>(R.id.btncadastr) as SignInButton
-        signbtnGoogle.setOnClickListener {
-                view: View? -> signUPGoogle()
+        signbtnGoogle.setOnClickListener { view: View? ->
+            signUPGoogle()
         }
 
     }
@@ -62,7 +62,7 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
-    private fun handleResult(completedTask: Task<GoogleSignInAccount>){
+    private fun handleResult(completedTask: Task<GoogleSignInAccount>) {
         try {
             // Google Sign In was successful, authenticate with Firebase
             val account = completedTask.getResult(ApiException::class.java)
@@ -85,17 +85,18 @@ class SignUpActivity : AppCompatActivity() {
     }
 
 
-    fun signUp(view : View) {
+    fun signUp(view: View) {
 
-        if(txtemail.text.toString() != null && txtemail.text.toString() != ""
-            && txtpass.text.toString() != null && txtpass.text.toString() != "" ){
+        if (txtemail.text.toString() != null && txtemail.text.toString() != ""
+            && txtpass.text.toString() != null && txtpass.text.toString() != ""
+        ) {
 
-            if(txtpass.text.toString() == txtconfirmpass.text.toString()){
-                mAuth!!.createUserWithEmailAndPassword(txtemail.text.toString(),txtpass.text.toString())
+            if (txtpass.text.toString() == txtconfirmpass.text.toString()) {
+                mAuth!!.createUserWithEmailAndPassword(txtemail.text.toString(), txtpass.text.toString())
 
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
-                            Toast.makeText(applicationContext,"User Created", Toast.LENGTH_LONG).show()
+                            Toast.makeText(applicationContext, "User Created", Toast.LENGTH_LONG).show()
                             val intent = Intent(applicationContext, MainScreenActivity::class.java)
                             startActivity(intent)
                         }
@@ -103,17 +104,16 @@ class SignUpActivity : AppCompatActivity() {
 
                     .addOnFailureListener { exception ->
                         if (exception != null) {
-                            Toast.makeText(applicationContext,exception.localizedMessage, Toast.LENGTH_LONG).show()
+                            Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG).show()
                         }
                     }
-            }else{
-                Toast.makeText(applicationContext,"Password not match", Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(applicationContext, "Password not match", Toast.LENGTH_LONG).show()
             }
 
-        }else{
-            Toast.makeText(applicationContext,"Insert correctly inputs", Toast.LENGTH_LONG).show()
+        } else {
+            Toast.makeText(applicationContext, "Insert correctly inputs", Toast.LENGTH_LONG).show()
         }
-
 
 
     }

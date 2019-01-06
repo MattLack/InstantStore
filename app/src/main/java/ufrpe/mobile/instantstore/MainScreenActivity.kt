@@ -80,7 +80,7 @@ class MainScreenActivity : AppCompatActivity() , NavigationView.OnNavigationItem
             }
             R.id.action_upload -> {
 //                message.text = "message"
-                val intent = Intent(applicationContext,UploadActivity::class.java)
+                val intent = Intent(applicationContext, UploadActivity::class.java)
                 startActivity(intent)
             }else -> {
         }

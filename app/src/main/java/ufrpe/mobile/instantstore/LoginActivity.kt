@@ -48,6 +48,8 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
+
+
     private fun signInGoogle() {
         val signInIntent: Intent = mGoogleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
