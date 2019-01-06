@@ -63,26 +63,21 @@ class MainScreenActivity : AppCompatActivity() , NavigationView.OnNavigationItem
         // Handle presses on the action bar menu items
         when (item.itemId) {
             R.id.action_home -> {
-//                message.text = "set"
                 fragmentManager.beginTransaction().replace(R.id.fragment_main_screen, FragmentHome()).commit()
             }
             R.id.action_settings -> {
-//                message.text = "set"
                 fragmentManager.beginTransaction().replace(R.id.fragment_main_screen, FragmentSettings()).commit()
             }
             R.id.action_about_us -> {
-//                message.text = "about"
                 fragmentManager.beginTransaction().replace(R.id.fragment_main_screen, FragmentAbout()).commit()
             }
             R.id.action_demand -> {
-//                message.text = "message"
                 fragmentManager.beginTransaction().replace(R.id.fragment_main_screen, FragmentDemand()).commit()
             }
             R.id.action_upload -> {
-//                message.text = "message"
-                fragmentManager.beginTransaction().replace(R.id.fragment_main_screen, FragmentUpload()).commit()
-                /*val intent = Intent(applicationContext, UploadActivity::class.java)
-                startActivity(intent)*/
+                //fragmentManager.beginTransaction().replace(R.id.fragment_main_screen, FragmentUpload()).commit()
+                val intent = Intent(applicationContext, UploadActivity::class.java)
+                startActivity(intent)
             }else -> {
         }
         }
