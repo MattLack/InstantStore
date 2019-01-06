@@ -4,7 +4,8 @@ Project Mobile in Kotlin language
 ### Tecnologias Utilizadas: 
 - Kotlin
 - Firebase
-~~- Instant Apps~~
+- ~~Instant Apps~~
+
 **Não se tornou possível continuar o projeto em implementação Instant App**
 
 ### Considerações sobre a tecnologia Instant App
