@@ -124,11 +124,13 @@ class FragmentUpload : Fragment() {
     private fun saveAllInformations(imgurl: String, comentary: String) {
         val user = mAuth!!.currentUser
         val userEmail = user!!.email.toString()
+        val uid = UUID.randomUUID().toString()
         val uploadMap = HashMap<String, Any>()
 
         uploadMap["userEmail"] = userEmail
         uploadMap["txt"] = comentary
         uploadMap["imgUrl"] = imgurl
+        uploadMap["id"] = uid
 
         db.collection("Post").add(uploadMap).addOnSuccessListener {
             Toast.makeText(context, "Successfully uploaded to the database :)", Toast.LENGTH_LONG).show()

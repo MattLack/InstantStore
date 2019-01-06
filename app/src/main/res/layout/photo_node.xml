@@ -19,16 +19,16 @@
         <TextView
                 android:text="TextView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textView6"/>
+                android:layout_height="wrap_content" android:id="@+id/tv_authorUser"/>
         <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="180dp" app:srcCompat="@drawable/ic_about" tools:layout_editor_absoluteY="102dp"
-                tools:layout_editor_absoluteX="43dp" android:id="@+id/imageView"/>
+                tools:layout_editor_absoluteX="43dp" android:id="@+id/imgv_posted"/>
         <TextView
                 android:text="TextView"
                 android:layout_width="match_parent"
                 android:layout_height="80dp" tools:layout_editor_absoluteY="284dp"
-                tools:layout_editor_absoluteX="43dp" android:id="@+id/textView3"/>
+                tools:layout_editor_absoluteX="43dp" android:id="@+id/tv_comment"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
