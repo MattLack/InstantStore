@@ -17,6 +17,7 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
@@ -37,7 +38,8 @@ class UploadActivity : AppCompatActivity() {
     private var filePath: Uri? = null
     internal var storage: FirebaseStorage? = null
     var firebaseDatabase: FirebaseDatabase? = null
-    lateinit var db: DocumentReference
+    lateinit var db: FirebaseFirestore
+    lateinit var notesCollectionRef: CollectionReference
     internal var storageReference: StorageReference? = null
     var mAuth: FirebaseAuth? = null
 
@@ -51,7 +53,15 @@ class UploadActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         firebaseDatabase = FirebaseDatabase.getInstance()
 
-        db = FirebaseFirestore.getInstance().document("Posts")
+        //firestore
+
+        // Access a Cloud Firestore instance from your Activity
+        db = FirebaseFirestore.getInstance()
+
+        // Reference to a Collection
+        notesCollectionRef = db.collection("InstantStore")
+
+        //db = FirebaseFirestore.getInstance().document("InstantStore")
 
 
     }
@@ -126,12 +136,23 @@ class UploadActivity : AppCompatActivity() {
 
         val photo = Photo(imgurl, comentary, userEmail)
 
-        ref.setValue(photo)
+        val uploadMap = HashMap<String,Any>()
+        uploadMap["userEmail"] = userEmail
+        uploadMap["txt"] = comentary
+        uploadMap["imgUrl"] = imgurl
+
+        db.collection("Post").add(uploadMap).addOnSuccessListener {
+                Toast.makeText(this, "Successfully uploaded to the database :)", Toast.LENGTH_LONG).show()
+        }.addOnFailureListener {
+                Toast.makeText(this,"deu ruim", Toast.LENGTH_LONG).show()
+        }
+
+       /* ref.setValue(photo)
             .addOnSuccessListener {
                 Toast.makeText(this, "Save in database", Toast.LENGTH_SHORT).show()
             }.addOnCompleteListener {
                 Toast.makeText(this, "Save in database", Toast.LENGTH_SHORT).show()
-            }
+            }*/
     }
 
 
