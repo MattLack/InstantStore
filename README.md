@@ -48,6 +48,9 @@ Project Mobile in Kotlin language
  - [Firebase Firestore](https://grokonez.com/android/kotlin-firestore-example-crud-operations-with-recyclerview-android)
  - [Firebase Firestore videos](https://www.letsbuildthatapp.com/course_video?id=3512)
  - [Firebase Login](https://grokonez.com/android/kotlin-firebase-authentication-how-to-sign-up-sign-in-sign-out-verify-email-android)
+ - [Kotlin RecyclerView Using Firebase](https://www.youtube.com/watch?v=5tgL0ujXeFk)
+ - [Firebase UI](https://github.com/firebase/FirebaseUI-Android/tree/master/firestore)
+ - [Display Firebase database items using Recyclerview with Cardview in android](https://www.mytrendin.com/display-firebase-database-items-recyclerview-cardview/)
   
  
  
