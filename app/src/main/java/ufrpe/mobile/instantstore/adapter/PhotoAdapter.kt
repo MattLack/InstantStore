@@ -1,5 +1,6 @@
 package ufrpe.mobile.instantstore.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
@@ -40,6 +41,25 @@ class PhotoAdapter(
     override fun getItemCount(): Int {
         return photoList.size
     }
+
+
+    /*override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+
+        val layoutInflater = context.
+
+        val customView = layoutInflater.inflate(R.layout.photo_node,null,true)
+
+        customView.tv_authorUser.text = "Autor: ${photoList[position].author}"
+        customView.tv_comment.text = photoList[position].txt
+        customView.imgv_posted.text = photoList[position].txt
+
+        Picasso
+            .with(context)
+            .load(photoList[position].img)
+            .into(customView.image)
+
+        return customView
+    }*/
 
     inner class ViewHolder internal constructor(view: View) : RecyclerView.ViewHolder(view) {
         internal var title: TextView
