@@ -25,7 +25,7 @@ import java.util.*
 
 class FragmentUpload : Fragment() {
 
-    var resolver = activity!!.contentResolver
+    //var resolver = activity!!.contentResolver
     private val PICK_IMAGE_REQUEST = 1234
     private var filePath: Uri? = null
     lateinit var db: FirebaseFirestore
@@ -60,24 +60,6 @@ class FragmentUpload : Fragment() {
         }
 
         return view
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        //set imageview after user select image
-        if (requestCode == PICK_IMAGE_REQUEST &&
-            resultCode == Activity.RESULT_OK &&
-            data != null && data.data != null
-        ) {
-            filePath = data.data
-            try {
-                val bitmap = MediaStore.Images.Media.getBitmap(resolver, filePath)
-                img_uploaded.setImageBitmap(bitmap)
-            } catch (e: IOException) {
-                e.printStackTrace()
-            }
-        }
-
     }
 
     private fun choseImageFragment() {

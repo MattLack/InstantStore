@@ -24,13 +24,11 @@ import ufrpe.mobile.instantstore.adapter.PhotoAdapter
 import ufrpe.mobile.instantstore.model.Photo
 
 
-
 class FragmentHome : Fragment() {
 
     private val TAG = "FragmentHome"
     private var mAdapter: PhotoAdapter? = null
     private var firestoreDB: FirebaseFirestore? = null
-    private var firestoreListener: ListenerRegistration? = null
     val notesList = mutableListOf<Photo>()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -46,44 +44,17 @@ class FragmentHome : Fragment() {
 
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        firestoreListener!!.remove()
-    }
-
-/*
-    fun readData() {
-        firestoreDB!!.collection("Post").addSnapshotListener { documentSnapshots, e ->
-            if (e != null)
-                Log.d(TAG, "Error getting documents: ", e)
-            notesList.clear()
-            for (doc in documentSnapshots!!) {
-                val hashMap = doc as HashMap<String, String>
-                if (hashMap.size > 0) {
-                    //val photoPost = Photo(hashMap["img"], hashMap["txt"], hashMap["author"],hashMap["id"])
-                   // notesList.add(photoPost)
-
-                    mAdapter!!.notifyDataSetChanged()
-                }
-            }
-            val arrayAdapter = PhotoAdapter(notesList, requireContext(), firestoreDB!!)
-            val mLayoutManager = LinearLayoutManager(requireContext())
-            list_home.layoutManager = mLayoutManager
-            list_home.itemAnimator = DefaultItemAnimator()
-            list_home.adapter = arrayAdapter
-
-        }
-    }*/
-
     private fun loadNotesList() {
         firestoreDB!!.collection("Post")
             .get()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
 
+
                     for (doc in task.result!!) {
-                        val note = doc.toObject<Photo>(Photo::class.java)
-                        //note.id = doc.id
+
+                        val t = doc.data as HashMap<String, String>
+                        val note = Photo(t["imgUrl"], t["txt"], t["userEmail"], t["id"])
                         notesList.add(note)
                     }
 
