@@ -42,9 +42,6 @@ class UploadActivity : AppCompatActivity() {
         // Reference to a Collection
         notesCollectionRef = db.collection("InstantStore")
 
-
-
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
