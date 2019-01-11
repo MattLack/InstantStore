@@ -19,8 +19,6 @@ class PhotoAdapter(
     private val context: Context
 ) : RecyclerView.Adapter<PhotoAdapter.ViewHolder>() {
 
-    var mOnItemClickListener: OnItemClickListener? = null
-
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
         val view = LayoutInflater.from(p0.context).inflate(R.layout.photo_node, p0, false)
 
@@ -38,10 +36,10 @@ class PhotoAdapter(
             .into(p0.image)
 
         p0.itemView.setOnClickListener {
-            //Toast.makeText(context, "será que abriu?", Toast.LENGTH_LONG).show()
-            mOnItemClickListener?.onItemClick(p1)
-            it.context.startActivity(Intent(context, FormularyActivity::class.java))
-
+            val intent = Intent(context, FormularyActivity::class.java)
+            intent.putExtra("imgUrl", photoList[p1].img)
+            intent.putExtra("author", photoList[p1].author)
+            it.context.startActivity(intent)
         }
 
     }
@@ -62,10 +60,6 @@ class PhotoAdapter(
             image = view.findViewById(R.id.imgv_posted)
 
         }
-    }
-
-    interface  OnItemClickListener {
-        fun onItemClick(index: Int)
     }
 
 }
