@@ -5,13 +5,14 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentManager
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import android.widget.AdapterView
+import android.widget.Toast
 import com.google.firebase.database.*
 import com.google.firebase.firestore.EventListener
 import com.google.firebase.firestore.FirebaseFirestore
@@ -19,6 +20,8 @@ import com.google.firebase.firestore.ListenerRegistration
 import kotlinx.android.synthetic.main.fragment_view_profile.*
 import ufrpe.mobile.instantstore.MainScreenActivity
 import com.google.firebase.firestore.CollectionReference;
+import kotlinx.android.synthetic.main.fragment_view_profile.view.*
+import kotlinx.android.synthetic.main.photo_node.view.*
 import ufrpe.mobile.instantstore.R
 import ufrpe.mobile.instantstore.adapter.PhotoAdapter
 import ufrpe.mobile.instantstore.model.Photo
@@ -40,6 +43,10 @@ class FragmentHome : Fragment() {
         loadNotesList()
         //readData()
 
+        // Usage:
+        //list_home.photo_card.setOnClickListener {
+        //}
+
         return view
 
     }
@@ -58,7 +65,7 @@ class FragmentHome : Fragment() {
                         notesList.add(note)
                     }
 
-                    mAdapter = PhotoAdapter(notesList, requireContext(), firestoreDB!!)
+                    mAdapter = PhotoAdapter(notesList, requireContext())
                     val mLayoutManager = LinearLayoutManager(requireContext())
                     list_home.layoutManager = mLayoutManager
                     list_home.itemAnimator = DefaultItemAnimator()
@@ -68,8 +75,8 @@ class FragmentHome : Fragment() {
                 }
             }
 
-
     }
+
 
     companion object {
         fun getLaunchIntent(from: Context) = Intent(from, MainScreenActivity::class.java).apply {
@@ -78,5 +85,4 @@ class FragmentHome : Fragment() {
 
         fun newInstance() = FragmentHome()
     }
-
 }

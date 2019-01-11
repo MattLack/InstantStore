@@ -1,6 +1,5 @@
 package ufrpe.mobile.instantstore.adapter
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
@@ -9,17 +8,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import com.google.firebase.firestore.FirebaseFirestore
 import com.squareup.picasso.Picasso
 import ufrpe.mobile.instantstore.R
 import ufrpe.mobile.instantstore.model.Photo
+import ufrpe.mobile.instantstore.FormularyActivity
 
 
 class PhotoAdapter(
     private val photoList: MutableList<Photo>,
-    private val context: Context,
-    private val firestoreDB: FirebaseFirestore
+    private val context: Context
 ) : RecyclerView.Adapter<PhotoAdapter.ViewHolder>() {
+
+    var mOnItemClickListener: OnItemClickListener? = null
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
         val view = LayoutInflater.from(p0.context).inflate(R.layout.photo_node, p0, false)
@@ -36,30 +36,20 @@ class PhotoAdapter(
             .with(context)
             .load(photoList[p1].img)
             .into(p0.image)
+
+        p0.itemView.setOnClickListener {
+            //Toast.makeText(context, "será que abriu?", Toast.LENGTH_LONG).show()
+            mOnItemClickListener?.onItemClick(p1)
+            it.context.startActivity(Intent(context, FormularyActivity::class.java))
+
+        }
+
     }
 
     override fun getItemCount(): Int {
         return photoList.size
     }
 
-
-    /*override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-
-        val layoutInflater = context.
-
-        val customView = layoutInflater.inflate(R.layout.photo_node,null,true)
-
-        customView.tv_authorUser.text = "Autor: ${photoList[position].author}"
-        customView.tv_comment.text = photoList[position].txt
-        customView.imgv_posted.text = photoList[position].txt
-
-        Picasso
-            .with(context)
-            .load(photoList[position].img)
-            .into(customView.image)
-
-        return customView
-    }*/
 
     inner class ViewHolder internal constructor(view: View) : RecyclerView.ViewHolder(view) {
         internal var title: TextView
@@ -74,5 +64,8 @@ class PhotoAdapter(
         }
     }
 
+    interface  OnItemClickListener {
+        fun onItemClick(index: Int)
+    }
 
 }

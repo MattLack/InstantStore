@@ -18,7 +18,7 @@ class FragmentDemand : Fragment() {
 
         val title = view.findViewById<TextView>(R.id.title)
 
-        title.text = "Fragment Message"
+        title.text = "Fragment Demand"
         //title.setTextColor(resources.getColor(R.color.colorAccent, null))
 
         return view
