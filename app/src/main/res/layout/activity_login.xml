@@ -12,7 +12,7 @@
             android:layout_width="130dp"
             android:layout_height="98dp"
             android:id="@+id/img_uploaded"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="8sp"
             app:layout_constraintBottom_toTopOf="@+id/textView" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
@@ -25,12 +25,12 @@
             android:ems="10"
             android:id="@+id/txtemail"
             android:hint="@string/txtHintEmail"
-            android:layout_marginBottom="48dp"
+            android:layout_marginBottom="12dp"
             app:layout_constraintBottom_toTopOf="@+id/txtpass"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"
-            app:layout_constraintHorizontal_bias="0.0"/>
+            app:layout_constraintHorizontal_bias="1.0"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"
-            app:layout_constraintHorizontal_bias="0.0" android:layout_marginBottom="292dp"
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginBottom="332dp"
             app:layout_constraintBottom_toBottomOf="parent"/>
     <Button
             android:text="@string/btnlogin"
@@ -63,7 +63,7 @@
     <com.google.android.gms.common.SignInButton
             android:text="@string/btnlogg"
             android:textColor="#5555ff"
-            android:layout_width="286dp"
+            android:layout_width="143dp"
             android:layout_height="54dp"
             android:id="@+id/google_button"
             android:layout_marginBottom="40dp"
