@@ -10,7 +10,6 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_upload.*
@@ -25,7 +24,6 @@ class UploadActivity : AppCompatActivity() {
     private val PICK_IMAGE_REQUEST = 1234
     private var filePath: Uri? = null
     lateinit var db: FirebaseFirestore
-    lateinit var notesCollectionRef: CollectionReference
     var mAuth: FirebaseAuth? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,13 +32,8 @@ class UploadActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
-        //firestore
-
         // Access a Cloud Firestore instance from your Activity
         db = FirebaseFirestore.getInstance()
-
-        // Reference to a Collection
-        notesCollectionRef = db.collection("InstantStore")
 
     }
 

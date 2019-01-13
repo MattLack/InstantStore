@@ -10,6 +10,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_demand.*
 import ufrpe.mobile.instantstore.MainScreenActivity
@@ -24,11 +25,15 @@ class FragmentDemand : Fragment() {
     private var mAdapter: DemandAdapter? = null
     private var firestoreDB: FirebaseFirestore? = null
     val notesList = mutableListOf<Demand>()
+    var mAuth: FirebaseAuth? = null
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_demand, container, false)
 
         firestoreDB = FirebaseFirestore.getInstance()
+
+        mAuth = FirebaseAuth.getInstance()
 
         loadNotesList()
 
@@ -37,6 +42,9 @@ class FragmentDemand : Fragment() {
     }
 
     private fun loadNotesList() {
+        val user = mAuth!!.currentUser
+        val userEmail = user!!.email.toString()
+
         firestoreDB!!.collection("Demand")
             .get()
             .addOnCompleteListener { task ->
@@ -44,9 +52,22 @@ class FragmentDemand : Fragment() {
 
                     for (doc in task.result!!) {
 
-                        val t = doc.data as HashMap<String, String>
-                        val note = Demand(t["imgUrl"], t["phoneNumber"], t["userClient"], t["txt"], t["userStore"], t["id"])
-                        notesList.add(note)
+                        val tc = doc.get("userStore")
+
+                        if (tc == userEmail) {
+
+                            val t = doc.data as HashMap<String, String>
+                            val note = Demand(
+                                t["imgUrl"],
+                                t["phoneNumber"],
+                                t["userClient"],
+                                t["txt"],
+                                t["userStore"],
+                                t["id"]
+                            )
+                            notesList.add(note)
+
+                        }
                     }
 
                     mAdapter = DemandAdapter(notesList, requireContext())
@@ -61,12 +82,4 @@ class FragmentDemand : Fragment() {
 
     }
 
-
-    companion object {
-        fun getLaunchIntent(from: Context) = Intent(from, MainScreenActivity::class.java).apply {
-            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-        }
-
-        fun newInstance() = FragmentDemand()
-    }
 }

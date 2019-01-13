@@ -26,7 +26,7 @@
     <string name="btn_photodetail">purchase</string>
     <string name="hint_form">Your comment</string>
     <string name="btn_photoform">Send your order</string>
-    <string name="upload_image">Upload Image</string>
+    <string name="upload_image">Upload Item</string>
     <string name="hint_emailform">Your e-mail</string>
     <string name="hint_phoneform">Your phone</string>
     <string name="upload">Upload</string>
@@ -34,4 +34,7 @@
     <string name="comment">Add a comment</string>
     <string name="conf_logout">Logout</string>
     <string name="btnsubmit">Submit</string>
+    <string name="tv_NClient">Client e-mail:</string>
+    <string name="tv_NCphone">Client Phone number:</string>
+    <string name="tv_NComent">Client Comentary:</string>
 </resources>

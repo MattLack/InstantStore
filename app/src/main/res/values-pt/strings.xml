@@ -23,7 +23,7 @@
     <string name="textPosts">Publicações</string>
     <string name="textFollowers">Seguidores</string>
     <string name="textFollolwing">Seguindo</string>
-    <string name="upload_image">Enviar Imagem</string>
+    <string name="upload_image">Enviar Item</string>
     <string name="btn_photoform">Faça seu Pedido</string>
     <string name="hint_phoneform">Seu Telefone</string>
     <string name="hint_emailform">Seu E-mail</string>
@@ -33,4 +33,8 @@
     <string name="btn_return">Retornar para Home</string>
     <string name="comment">Adicione um comentário</string>
     <string name="conf_logout">Sair</string>
+    <string name="tv_NCphone">Telefone do Cliente:</string>
+    <string name="tv_NClient">E-mail do Cliente:</string>
+    <string name="btnsubmit">Enviar</string>
+    <string name="tv_NComent">"Comentário do Cliente: "</string>
 </resources>

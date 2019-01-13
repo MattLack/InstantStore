@@ -19,7 +19,7 @@ class DemandAdapter(
 ) : RecyclerView.Adapter<DemandAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
-        val view = LayoutInflater.from(p0.context).inflate(R.layout.photo_node, p0, false)
+        val view = LayoutInflater.from(p0.context).inflate(R.layout.demand_node, p0, false)
 
         return ViewHolder(view)
     }
@@ -27,8 +27,10 @@ class DemandAdapter(
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
         val note = demandList[p1]
 
-        //p0.title.text = note.author
-       // p0.content.text = note.txt
+        val titleEntry = p0.title.text.toString()
+        val clientEntry = note.userClient
+
+        p0.title.text = "$titleEntry $clientEntry"
         Picasso
             .with(context)
             .load(demandList[p1].img)
@@ -37,7 +39,10 @@ class DemandAdapter(
         p0.itemView.setOnClickListener {
             val intent = Intent(context, DemandDetailActivity::class.java)
             intent.putExtra("imgUrl", demandList[p1].img)
-            //intent.putExtra("author", demandList[p1].author)
+            intent.putExtra("phonenumber", demandList[p1].phonenumber)
+            intent.putExtra("text", demandList[p1].text)
+            intent.putExtra("userClient", demandList[p1].userClient)
+            intent.putExtra("userStore", demandList[p1].userStore)
             it.context.startActivity(intent)
         }
 
@@ -50,13 +55,11 @@ class DemandAdapter(
 
     inner class ViewHolder internal constructor(view: View) : RecyclerView.ViewHolder(view) {
         internal var title: TextView
-        internal var content: TextView
         internal var image: ImageView
 
         init {
-            title = view.findViewById(R.id.tv_authorUser)
-            content = view.findViewById(R.id.tv_comment)
-            image = view.findViewById(R.id.imgv_posted)
+            title = view.findViewById(R.id.tv_userClient)
+            image = view.findViewById(R.id.imgv_Demand)
 
         }
     }

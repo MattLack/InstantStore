@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_formulary.*
@@ -15,9 +14,7 @@ import java.util.*
 class FormularyActivity : AppCompatActivity() {
 
     lateinit var db: FirebaseFirestore
-    lateinit var notesCollectionRef: CollectionReference
     var mAuth: FirebaseAuth? = null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,13 +22,8 @@ class FormularyActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
-        //firestore
-
         // Access a Cloud Firestore instance from your Activity
         db = FirebaseFirestore.getInstance()
-
-        // Reference to a Collection
-        notesCollectionRef = db.collection("InstantStore")
 
         loadInformationsInScreen()
 
