@@ -23,7 +23,6 @@ class FormularyActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_formulary)
 
-
         mAuth = FirebaseAuth.getInstance()
 
         //firestore
@@ -35,7 +34,6 @@ class FormularyActivity : AppCompatActivity() {
         notesCollectionRef = db.collection("InstantStore")
 
         loadInformationsInScreen()
-
 
     }
 
@@ -89,7 +87,7 @@ class FormularyActivity : AppCompatActivity() {
         db.collection("Demand").add(uploadMap).addOnSuccessListener {
             Toast.makeText(this, "Successfully uploaded to the database :)", Toast.LENGTH_LONG).show()
         }.addOnFailureListener {
-            Toast.makeText(this, "deu ruim", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Upload fail :(", Toast.LENGTH_LONG).show()
         }
     }
 

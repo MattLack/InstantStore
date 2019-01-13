@@ -1,6 +1,5 @@
 package ufrpe.mobile.instantstore
 
-import android.app.ListActivity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -117,13 +116,5 @@ class SignUpActivity : AppCompatActivity() {
 
 
     }
-
-
-    /*
-    fun goToMainScreenActvity(view : View){
-        val intent = Intent(applicationContext,MainScreenActivity::class.java)
-        // intent.putExtra("input",editText.text.toString())
-        startActivity(intent)
-    }*/
 
 }

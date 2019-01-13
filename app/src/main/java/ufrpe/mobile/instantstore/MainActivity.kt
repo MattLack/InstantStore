@@ -12,15 +12,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-
-    fun goToSignUpActvity(view : View){
-        val intent = Intent(applicationContext,SignUpActivity::class.java)
+    fun goToSignUpActvity(view: View) {
+        val intent = Intent(applicationContext, SignUpActivity::class.java)
         // intent.putExtra("input",editText.text.toString())
         startActivity(intent)
     }
 
-    fun gotoLoginActivity(view : View){
-        val intent = Intent(applicationContext,LoginActivity::class.java)
+    fun gotoLoginActivity(view: View) {
+        val intent = Intent(applicationContext, LoginActivity::class.java)
         // intent.putExtra("input",editText.text.toString())
         startActivity(intent)
     }

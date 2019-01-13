@@ -30,24 +30,22 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-       mAuth = FirebaseAuth.getInstance()
-       mAuthListener = FirebaseAuth.AuthStateListener {  }
+        mAuth = FirebaseAuth.getInstance()
+        mAuthListener = FirebaseAuth.AuthStateListener { }
 
         mGoogleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
 
-        mGoogleSignInClient = GoogleSignIn.getClient(this,mGoogleSignInOptions)
+        mGoogleSignInClient = GoogleSignIn.getClient(this, mGoogleSignInOptions)
 
         val signbtnGoogle = findViewById<View>(R.id.google_button) as SignInButton
-        signbtnGoogle.setOnClickListener {
-            view: View? -> signInGoogle()
+        signbtnGoogle.setOnClickListener { view: View? ->
+            signInGoogle()
         }
 
     }
-
-
 
 
     private fun signInGoogle() {
@@ -55,10 +53,11 @@ class LoginActivity : AppCompatActivity() {
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
 
-    fun signIn(view : View) {
+    fun signIn(view: View) {
 
-        if(txtemail.text.toString() != null && txtemail.text.toString() != ""
-            && txtpass.text.toString() != null && txtpass.text.toString() != "" ) {
+        if (txtemail.text.toString() != null && txtemail.text.toString() != ""
+            && txtpass.text.toString() != null && txtpass.text.toString() != ""
+        ) {
             mAuth!!.signInWithEmailAndPassword(txtemail.text.toString(), txtpass.text.toString())
 
                 .addOnCompleteListener { task ->
@@ -71,7 +70,7 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG).show()
                 }
 
-        }else {
+        } else {
             Toast.makeText(applicationContext, "Insert a valid email and password", Toast.LENGTH_LONG).show()
         }
 
@@ -81,7 +80,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         val currentUser = mAuth?.currentUser
-        Log.i( "FireBase", "Email:" + currentUser?.email)
+        Log.i("FireBase", "Email:" + currentUser?.email)
     }
 
     public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -93,14 +92,14 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun handleResult(completedTask: Task<GoogleSignInAccount>){
+    private fun handleResult(completedTask: Task<GoogleSignInAccount>) {
         try {
             // Google Sign In was successful, authenticate with Firebase
             val account = completedTask.getResult(ApiException::class.java)
             firebaseAuthWithGoogle(account!!)
         } catch (e: ApiException) {
             // Google Sign In failed, update UI appropriately
-            Toast.makeText(this, "Google sign in failed:(", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Google sign in failed :(", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -110,7 +109,7 @@ class LoginActivity : AppCompatActivity() {
             if (it.isSuccessful) {
                 startActivity(FragmentHome.getLaunchIntent(this))
             } else {
-                Toast.makeText(this, "Google sign in failed:(", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Google Authentication failed :(", Toast.LENGTH_LONG).show()
             }
         }
     }

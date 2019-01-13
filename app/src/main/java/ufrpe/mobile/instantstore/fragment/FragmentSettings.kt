@@ -17,10 +17,10 @@ class FragmentSettings : Fragment() {
     var mAuthListener: FirebaseAuth.AuthStateListener? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.conf_node,container, false)
+        val view = inflater.inflate(R.layout.conf_node, container, false)
 
         mAuth = FirebaseAuth.getInstance()
-        mAuthListener = FirebaseAuth.AuthStateListener {  }
+        mAuthListener = FirebaseAuth.AuthStateListener { }
 
         view.note_item_description.setOnClickListener {
             logout()
@@ -29,7 +29,7 @@ class FragmentSettings : Fragment() {
         return view
     }
 
-    private fun logout(){
+    private fun logout() {
         mAuth!!.signOut()
         val intent3 = Intent(context, MainActivity::class.java)
         startActivity(intent3)

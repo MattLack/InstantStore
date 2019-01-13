@@ -117,7 +117,7 @@ class UploadActivity : AppCompatActivity() {
         db.collection("Post").add(uploadMap).addOnSuccessListener {
             Toast.makeText(this, "Successfully uploaded to the database :)", Toast.LENGTH_LONG).show()
         }.addOnFailureListener {
-            Toast.makeText(this, "deu ruim", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Upload fail :(", Toast.LENGTH_LONG).show()
         }
     }
 

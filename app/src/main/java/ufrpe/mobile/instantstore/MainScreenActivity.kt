@@ -1,12 +1,9 @@
 package ufrpe.mobile.instantstore
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
 import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
@@ -14,10 +11,8 @@ import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main_screen.*
-import kotlinx.android.synthetic.main.activity_upload.*
 import kotlinx.android.synthetic.main.app_bar_drawer.*
 import ufrpe.mobile.instantstore.fragment.*
-import java.io.IOException
 
 
 class MainScreenActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
