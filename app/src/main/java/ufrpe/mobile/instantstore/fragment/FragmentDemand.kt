@@ -1,7 +1,5 @@
 package ufrpe.mobile.instantstore.fragment
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.DefaultItemAnimator
@@ -13,7 +11,6 @@ import android.view.ViewGroup
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_demand.*
-import ufrpe.mobile.instantstore.MainScreenActivity
 import ufrpe.mobile.instantstore.R
 import ufrpe.mobile.instantstore.adapter.DemandAdapter
 import ufrpe.mobile.instantstore.model.Demand

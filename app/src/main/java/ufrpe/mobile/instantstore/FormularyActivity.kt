@@ -34,11 +34,19 @@ class FormularyActivity : AppCompatActivity() {
         val img = intent.getStringExtra("imgUrl")
         val authorD = intent.getStringExtra("author")
         val coment = text_form.text.toString()
+        if (coment.length > 10) {
 
-        saveAllInformations(img, coment, authorD)
+            if (txt_phoneform.text.toString().length > 8) {
 
-        val intent = Intent(applicationContext, MainScreenActivity::class.java)
-        startActivity(intent)
+                saveAllInformations(img, coment, authorD)
+                val intent = Intent(applicationContext, MainScreenActivity::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "Please, insert a valid number :)", Toast.LENGTH_LONG).show()
+            }
+        } else {
+            Toast.makeText(this, "Please, insert a commentary :)", Toast.LENGTH_LONG).show()
+        }
 
     }
 
@@ -53,7 +61,7 @@ class FormularyActivity : AppCompatActivity() {
 
         val authorD = intent.getStringExtra("author")
 
-        tv_author.text = authorD
+        tv_authorN.text = authorD
 
     }
 
@@ -77,7 +85,7 @@ class FormularyActivity : AppCompatActivity() {
         uploadMap["phoneNumber"] = txt_phoneform.text.toString()
 
         db.collection("Demand").add(uploadMap).addOnSuccessListener {
-            Toast.makeText(this, "Successfully uploaded to the database :)", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Demand successfully sent :)", Toast.LENGTH_LONG).show()
         }.addOnFailureListener {
             Toast.makeText(this, "Upload fail :(", Toast.LENGTH_LONG).show()
         }

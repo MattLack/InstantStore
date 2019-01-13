@@ -30,6 +30,7 @@
                 android:textSize="18sp"
                 android:textColor="#ffffff"
                 android:gravity="center"
+                android:textStyle="bold"
                 android:background="@drawable/buttonshapecollor"
                 android:layout_height="wrap_content" android:id="@+id/tv_userClient"/>
 

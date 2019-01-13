@@ -61,7 +61,11 @@ class UploadActivity : AppCompatActivity() {
 
     fun uploadImage(v: View?) {
         val userComment = textComment.text.toString()
-        uploadImagetoFirebase(userComment)
+        if (userComment.length > 10) {
+            uploadImagetoFirebase(userComment)
+        }else{
+            Toast.makeText(this, "Please, insert a commentary :)", Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun uploadImagetoFirebase(coment: String) {
@@ -108,7 +112,7 @@ class UploadActivity : AppCompatActivity() {
         uploadMap["id"] = uid
 
         db.collection("Post").add(uploadMap).addOnSuccessListener {
-            Toast.makeText(this, "Successfully uploaded to the database :)", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Item successfully sent :)", Toast.LENGTH_LONG).show()
         }.addOnFailureListener {
             Toast.makeText(this, "Upload fail :(", Toast.LENGTH_LONG).show()
         }
