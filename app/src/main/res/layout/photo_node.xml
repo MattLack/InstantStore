@@ -50,7 +50,7 @@
         <TextView
                 android:text="TextView"
                 android:layout_width="match_parent"
-                android:background="@drawable/buttonshapecollor"
+                android:background="#ab3db8"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:textColor="#ffffff"
